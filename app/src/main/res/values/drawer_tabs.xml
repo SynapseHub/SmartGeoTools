@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="drawer_tabs">
-        <item>Search</item>
         <item>Maps</item>
-        <item>POI</item>
+        <item>Trend</item>
+        <item>Search</item>
+        <item>Help Feedback</item>
     </string-array>
 </resources>

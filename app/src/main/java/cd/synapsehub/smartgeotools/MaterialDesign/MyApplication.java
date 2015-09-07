@@ -1,24 +1,43 @@
-package cd.synapsehub.smartgeotools.MaterialDesign;
+package cd.synapsehub.smartgeotools.materialdesign;
 
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-/**
- * Created by user on 8/11/15.
- */
-public class MyApplication extends Application {
+import cd.synapsehub.smartgeotools.database.DBMovies;
 
+/**
+ * Created by user on 9/7/15.
+ */
+public class MyApplication extends Application{
+
+   public static final String API_KEY_ROTTEN_TOMATOES = "54wzfswsa4qmjg8hjwa64d4c";
     private static MyApplication sInstance;
 
-    public static MyApplication getInstance(){return sInstance;}
-    public static Context getAppContext(){return sInstance.getApplicationContext();}
+    // private static DBSmartGeo mDatabase;
+    private static DBMovies mDatabase;
+
+    public static MyApplication getInstance() {
+        return sInstance;
+    }
+
+    public static Context getAppContext() {
+        return sInstance.getApplicationContext();
+    }
+
+   public synchronized static DBMovies getWritableDatabase() {
+        if (mDatabase == null) {
+            mDatabase = new DBMovies(getAppContext());
+        }
+        return mDatabase;
+    }
 
     @Override
-    public void onCreate(){
+    public void onCreate() {
         super.onCreate();
-        sInstance=this;
+        sInstance = this;
+        mDatabase = new DBMovies(this);
     }
 
     public static void saveToPreferences(Context context, String preferenceName, String preferenceValue) {

@@ -1,19 +1,13 @@
 <resources>
     <string name="app_name">SmartGeoTools</string>
     <string name="title_activity_main">SmartGeoTools</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_sub">SubActivity</string>
     <string name="next">TouchProcessingActivity</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
-    <string name="search_data">Search Data</string>
-    <string name="error_timeout">Oops! Your Connection Timed Out</string>
-    <string name="error_parser">Oops! Data Received Was An Unreadable Mess</string>
-    <string name="action_add">+</string>
-    <string name="action_remove">-</string>
-
+    <string name="search_poi">Search POI</string>
 
     <string-array name="tabs">
         <item>TAB 1</item>
@@ -23,6 +17,11 @@
         <item>TAB 5</item>
         <item>TAB 6</item>
     </string-array>
+
+    <string name="error_timeout">Oops! Your Connection Timed Out</string>
+    <string name="error_auth_failure">Oops! RottenTomatoes Says It Doesn\'t Recognize You</string>
+    <string name="error_network">Oops! RottenTomatoes Server Just Messed Up</string>
+    <string name="error_parser">Oops! Data Received Was An Unreadable Mess</string>
 
 
 </resources>
